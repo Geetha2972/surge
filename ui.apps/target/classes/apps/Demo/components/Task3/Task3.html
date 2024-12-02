@@ -1,0 +1,25 @@
+<h1>Task3</h1>
+<div data-sly-use.msg="com.adobe.aem.guides.demo.core.models.Task3"></div>
+<div>
+    <h2>Tab1: Header</h2>
+    <p>Logo Path: ${msg.logoPath}</p>
+    <p>Logo Mobile Image: ${msg.logoMobileImage}</p>
+    <p>Logo Link: ${msg.logoLink}</p>
+    <p>Enable Switch: ${msg.enableSwitch}</p>
+    <h2>Tab2: Header Links</h2>
+    <div data-sly-list.link="${msg.multifield}">
+        <p>Name: ${link.name}</p>
+        <p>Image: ${link.image}</p>
+    </div>
+
+    <h2>Tab3: SideBar Navigation</h2>
+    <sly data-sly-list.nav="${msg.multifield2}">
+        <p>Desktop Icon: ${nav.desktopicon}</p>
+        <p>Mobile Icon: ${nav.mobileicon}</p>
+        <sly data-sly-list.navigationUrls="${nav.nestedmultifield}">
+            <p>Navigation URL: ${navigationUrls.navigationurl}</p>
+        </sly>
+    </sly>
+    <h2>Tab4: Region</h2>
+    <p>Country: ${msg.countries}</p>
+</div>

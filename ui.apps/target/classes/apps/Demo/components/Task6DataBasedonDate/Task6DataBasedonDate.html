@@ -1,0 +1,15 @@
+<h1> Task</h1>
+<div class="custom-component">
+    <div data-sly-use.Model="com.adobe.aem.guides.demo.core.models.Task6DataBasedOndate">
+        <div data-sly-test="${Model.message == 'Valid'}">
+            <p>Textfield:${properties.textfield}</p>
+            <p>Path: ${properties.pathfield}</p>
+        </div>
+        <div data-sly-test="${Model.message == 'Component Expired'}">
+            <p>Component Expired</p>
+        </div>
+        <div data-sly-test="${Model.message == 'Invalid Date'}">
+            <p>Invalid Date Selected</p>
+        </div>
+    </div>
+</div> 

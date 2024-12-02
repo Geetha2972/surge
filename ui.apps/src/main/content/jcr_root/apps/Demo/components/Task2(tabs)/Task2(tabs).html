@@ -1,0 +1,16 @@
+<h1>Task2</h1>
+    <div data-sly-use.obj="com.adobe.aem.guides.demo.core.models.Task2">
+        <p>Tab 1</p>
+        <p>Textfield: ${obj.textfield}</p> 
+    
+        <p>Tab 2</p>
+        <div data-sly-list.properties="${obj.multifield}">
+            <p>Text: ${properties.textfield}</p>
+            <p>Pathfield: ${properties.pathfield}</p>
+            <p>Dropdown: ${properties.dropdown}</p> 
+            <p>checkbox: ${properties.checkbox ? 'Yes' : 'No'}</p>
+            <div data-sly-list.properties1="${obj1.nestedTextField}">
+                <p>RichText: ${properties1.text @ context='html'}</p>
+            </div>
+        </div>
+   </div>
