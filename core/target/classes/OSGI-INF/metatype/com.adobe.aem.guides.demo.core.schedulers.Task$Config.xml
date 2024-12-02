@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.2.0" localization="OSGI-INF/l10n/com.adobe.aem.guides.demo.core.schedulers.Task$Config">
+  <OCD id="com.adobe.aem.guides.demo.core.schedulers.Task$Config" name="Custom AEM Scheduler" description="">
+    <AD id="scheduler.cron.expression" type="String" name="Cron Expression" description="Enter the cron expression" default="0\ 0/1\ *\ 1/1\ *\ ?\ *"/>
+  </OCD>
+  <Designate pid="com.adobe.aem.guides.demo.core.schedulers.Task">
+    <Object ocdref="com.adobe.aem.guides.demo.core.schedulers.Task$Config"/>
+  </Designate>
+</metatype:MetaData>
